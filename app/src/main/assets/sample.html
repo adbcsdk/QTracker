@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0" />
+</head>
+<style>
+    html,body { width:100%; height: 100%; margin: 0; }
+</style>
+<script type="text/javascript">
+
+    // addJavascriptInterface 함수 호출 시 입력한 name 값을 통해 호출
+    function sendEvent(event_name) {
+        QTracker.sendEvent(event_name);
+    }
+
+    function test() {
+        QTracker.test();
+    }
+
+</script>
+<body>
+<div>
+    <input type="button" value="sendEvent" onclick="sendEvent('custom_web_event');" />
+    <br><br><br>
+    <input type="button" value="test" onclick="test();" />
+</div>
+</body>
+</html>

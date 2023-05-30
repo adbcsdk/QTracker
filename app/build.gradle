@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.adbc.qtracker_test"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    testImplementation 'junit:junit:4.13.1'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // for QTracker
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.50'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.adbc.tracker:qtracker:2.0@aar'
+}
