@@ -22,7 +22,7 @@ allprojects {
             dirs 'libs'
         }
 
-        maven { url "http://repo.adbc.io:8081/repository/QTracker/" }
+        maven { url "https://nexus.adbc.io/repository/QTracker/" }
     }
 }
 
